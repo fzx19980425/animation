@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS 变换动画 | Web Animation 动画库</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/animation/images/hero.png">
+    <meta name="description" content="Web动画开发完整指南">
+    
+    <link rel="preload" href="/animation/assets/css/0.styles.b228da77.css" as="style"><link rel="preload" href="/animation/assets/js/app.408fb514.js" as="script"><link rel="preload" href="/animation/assets/js/2.5b3bc356.js" as="script"><link rel="preload" href="/animation/assets/js/1.ab08a951.js" as="script"><link rel="preload" href="/animation/assets/js/55.b99e5cf0.js" as="script"><link rel="prefetch" href="/animation/assets/js/10.ff739cea.js"><link rel="prefetch" href="/animation/assets/js/11.bf5ede1a.js"><link rel="prefetch" href="/animation/assets/js/12.f9e3cedb.js"><link rel="prefetch" href="/animation/assets/js/13.4c57fc3e.js"><link rel="prefetch" href="/animation/assets/js/14.db8ca42b.js"><link rel="prefetch" href="/animation/assets/js/15.d48b5620.js"><link rel="prefetch" href="/animation/assets/js/16.6798f64e.js"><link rel="prefetch" href="/animation/assets/js/17.a40a7d92.js"><link rel="prefetch" href="/animation/assets/js/18.9ecfa5ea.js"><link rel="prefetch" href="/animation/assets/js/19.6e3205fe.js"><link rel="prefetch" href="/animation/assets/js/20.628b3202.js"><link rel="prefetch" href="/animation/assets/js/21.fb8b6f22.js"><link rel="prefetch" href="/animation/assets/js/22.3e03c367.js"><link rel="prefetch" href="/animation/assets/js/23.49b7da03.js"><link rel="prefetch" href="/animation/assets/js/24.0a5df301.js"><link rel="prefetch" href="/animation/assets/js/25.cf410720.js"><link rel="prefetch" href="/animation/assets/js/26.d38fd659.js"><link rel="prefetch" href="/animation/assets/js/27.16afd375.js"><link rel="prefetch" href="/animation/assets/js/28.09392238.js"><link rel="prefetch" href="/animation/assets/js/29.12d0180f.js"><link rel="prefetch" href="/animation/assets/js/3.e45fdac8.js"><link rel="prefetch" href="/animation/assets/js/30.b273ba0b.js"><link rel="prefetch" href="/animation/assets/js/31.39f2908c.js"><link rel="prefetch" href="/animation/assets/js/32.3c5358d7.js"><link rel="prefetch" href="/animation/assets/js/33.75b092dc.js"><link rel="prefetch" href="/animation/assets/js/34.2db85df9.js"><link rel="prefetch" href="/animation/assets/js/35.10374096.js"><link rel="prefetch" href="/animation/assets/js/36.e690ff05.js"><link rel="prefetch" href="/animation/assets/js/37.091179bc.js"><link rel="prefetch" href="/animation/assets/js/38.1a871a63.js"><link rel="prefetch" href="/animation/assets/js/39.caa686e1.js"><link rel="prefetch" href="/animation/assets/js/4.e8777cae.js"><link rel="prefetch" href="/animation/assets/js/40.afe9dd9e.js"><link rel="prefetch" href="/animation/assets/js/41.a57025f2.js"><link rel="prefetch" href="/animation/assets/js/42.54deb15d.js"><link rel="prefetch" href="/animation/assets/js/43.f4cbe212.js"><link rel="prefetch" href="/animation/assets/js/44.5c474cc8.js"><link rel="prefetch" href="/animation/assets/js/45.6fc08af6.js"><link rel="prefetch" href="/animation/assets/js/46.12e49337.js"><link rel="prefetch" href="/animation/assets/js/47.6634cfec.js"><link rel="prefetch" href="/animation/assets/js/48.7293ec03.js"><link rel="prefetch" href="/animation/assets/js/49.ac137169.js"><link rel="prefetch" href="/animation/assets/js/5.7fde36a6.js"><link rel="prefetch" href="/animation/assets/js/50.b29cc359.js"><link rel="prefetch" href="/animation/assets/js/51.0c05a42d.js"><link rel="prefetch" href="/animation/assets/js/52.6aa9be30.js"><link rel="prefetch" href="/animation/assets/js/53.8d2ff91c.js"><link rel="prefetch" href="/animation/assets/js/54.e6e45f30.js"><link rel="prefetch" href="/animation/assets/js/56.3a783432.js"><link rel="prefetch" href="/animation/assets/js/57.fd51f5f9.js"><link rel="prefetch" href="/animation/assets/js/6.5debf9dc.js"><link rel="prefetch" href="/animation/assets/js/7.daa2ee9e.js"><link rel="prefetch" href="/animation/assets/js/vendors~docsearch.92fa0d62.js">
+    <link rel="stylesheet" href="/animation/assets/css/0.styles.b228da77.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/animation/" class="home-link router-link-active"><!----> <span class="site-name">Web Animation 动画库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" class="nav-link">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" class="nav-link">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🎯 动画基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>🎨 CSS动画技术</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/animation/technologies/css3.html" class="sidebar-link">CSS3动画基础</a></li><li><a href="/animation/technologies/transitions.html" class="sidebar-link">CSS过渡</a></li><li><a href="/animation/technologies/keyframes.html" class="sidebar-link">关键帧动画</a></li><li><a href="/animation/technologies/transform.html" aria-current="page" class="active sidebar-link">CSS变换</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#目录" class="sidebar-link">目录</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#基础概念" class="sidebar-link">基础概念</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#_2d-变换" class="sidebar-link">2D 变换</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#_3d-变换" class="sidebar-link">3D 变换</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#变换组合" class="sidebar-link">变换组合</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#性能优化" class="sidebar-link">性能优化</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#常见问题解决" class="sidebar-link">常见问题解决</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#最佳实践" class="sidebar-link">最佳实践</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/transform.html#相关资源" class="sidebar-link">相关资源</a></li></ul></li><li><a href="/animation/technologies/filters.html" class="sidebar-link">CSS滤镜</a></li><li><a href="/animation/examples/css3-examples.html" class="sidebar-link">CSS3动画示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🖼️ Canvas动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🔷 SVG动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🌐 3D动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📚 动画库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🚀 高级动画</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📖 开发指南</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css-变换动画"><a href="#css-变换动画" class="header-anchor">#</a> CSS 变换动画</h1> <blockquote><p>CSS 变换（Transform）是一种强大的 CSS 属性，允许我们对元素进行旋转、缩放、倾斜和平移等变换操作。本文档将详细介绍 CSS 变换的使用方法和最佳实践。更多示例请参考 <a href="/animation/technologies/css3-examples.html">CSS 动画示例</a>。</p></blockquote> <h2 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h2> <ul><li><a href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">基础概念</a></li> <li><a href="#2d-%E5%8F%98%E6%8D%A2">2D 变换</a></li> <li><a href="#3d-%E5%8F%98%E6%8D%A2">3D 变换</a></li> <li><a href="#%E5%8F%98%E6%8D%A2%E7%BB%84%E5%90%88">变换组合</a></li> <li><a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">性能优化</a></li> <li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">常见问题</a></li> <li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li> <li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90">相关资源</a></li></ul> <h2 id="基础概念"><a href="#基础概念" class="header-anchor">#</a> 基础概念</h2> <p>CSS 变换允许我们改变元素的形状、大小和位置，而不会影响文档流。它是实现动画效果的重要工具。更多基础概念请参考 <a href="/animation/technologies/css3.html">CSS 动画基础</a>。</p> <h3 id="基本语法"><a href="#基本语法" class="header-anchor">#</a> 基本语法</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 单个变换 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 多个变换 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 3D 变换 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_2d-变换"><a href="#_2d-变换" class="header-anchor">#</a> 2D 变换</h2> <h3 id="_1-平移-translate"><a href="#_1-平移-translate" class="header-anchor">#</a> 1. 平移 (translate)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 水平平移 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 垂直平移 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 同时水平和垂直平移 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-旋转-rotate"><a href="#_2-旋转-rotate" class="header-anchor">#</a> 2. 旋转 (rotate)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 顺时针旋转 45 度 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 逆时针旋转 45 度 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-缩放-scale"><a href="#_3-缩放-scale" class="header-anchor">#</a> 3. 缩放 (scale)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 水平缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 垂直缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 同时水平和垂直缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 分别设置水平和垂直缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.5<span class="token punctuation">,</span> 0.8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-倾斜-skew"><a href="#_4-倾斜-skew" class="header-anchor">#</a> 4. 倾斜 (skew)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 水平倾斜 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skewX</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 垂直倾斜 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skewY</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 同时水平和垂直倾斜 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skew</span><span class="token punctuation">(</span>30deg<span class="token punctuation">,</span> 20deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3d-变换"><a href="#_3d-变换" class="header-anchor">#</a> 3D 变换</h2> <h3 id="_1-3d-平移"><a href="#_1-3d-平移" class="header-anchor">#</a> 1. 3D 平移</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 3D 平移 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 分别设置 Z 轴平移 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3d-旋转"><a href="#_2-3d-旋转" class="header-anchor">#</a> 2. 3D 旋转</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 绕 X 轴旋转 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 绕 Y 轴旋转 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 绕 Z 轴旋转 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 3D 旋转 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate3d</span><span class="token punctuation">(</span>1<span class="token punctuation">,</span> 1<span class="token punctuation">,</span> 1<span class="token punctuation">,</span> 45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-3d-缩放"><a href="#_3-3d-缩放" class="header-anchor">#</a> 3. 3D 缩放</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Z 轴缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleZ</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 3D 缩放 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale3d</span><span class="token punctuation">(</span>1.5<span class="token punctuation">,</span> 1.5<span class="token punctuation">,</span> 1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-3d-变换属性"><a href="#_4-3d-变换属性" class="header-anchor">#</a> 4. 3D 变换属性</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 设置 3D 空间 */</span>
+    <span class="token property">perspective</span><span class="token punctuation">:</span> 1000px<span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 保持 3D 效果 */</span>
+    <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 设置观察点位置 */</span>
+    <span class="token property">perspective-origin</span><span class="token punctuation">:</span> 50% 50%<span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 设置背面可见性 */</span>
+    <span class="token property">backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="变换组合"><a href="#变换组合" class="header-anchor">#</a> 变换组合</h2> <h3 id="_1-2d-变换组合"><a href="#_1-2d-变换组合" class="header-anchor">#</a> 1. 2D 变换组合</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> 
+        <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span>
+        <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span>
+        <span class="token function">scale</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span>
+        <span class="token function">skew</span><span class="token punctuation">(</span>10deg<span class="token punctuation">,</span> 10deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3d-变换组合"><a href="#_2-3d-变换组合" class="header-anchor">#</a> 2. 3D 变换组合</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> 
+        <span class="token function">translate3d</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span>
+        <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span>
+        <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span>
+        <span class="token function">scale3d</span><span class="token punctuation">(</span>1.5<span class="token punctuation">,</span> 1.5<span class="token punctuation">,</span> 1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-变换管理器"><a href="#_3-变换管理器" class="header-anchor">#</a> 3. 变换管理器</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">TransformManager</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>element <span class="token operator">=</span> element<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>transforms <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">addTransform</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>transforms<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateTransforms</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">removeTransform</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>transforms<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateTransforms</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">updateTransforms</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> transformString <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>transforms<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>type<span class="token punctuation">,</span> value<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> transformString<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="性能优化"><a href="#性能优化" class="header-anchor">#</a> 性能优化</h2> <p>更多性能优化建议请参考<a href="/animation/technologies/performance.html">性能优化指南</a>。</p> <h3 id="_1-使用-transform-代替位置属性"><a href="#_1-使用-transform-代替位置属性" class="header-anchor">#</a> 1. 使用 transform 代替位置属性</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 不推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>100px<span class="token punctuation">,</span> 100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-使用-gpu-加速"><a href="#_2-使用-gpu-加速" class="header-anchor">#</a> 2. 使用 GPU 加速</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 强制 GPU 加速 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 或 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-使用-will-change"><a href="#_3-使用-will-change" class="header-anchor">#</a> 3. 使用 will-change</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">will-change</span><span class="token punctuation">:</span> transform<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="常见问题解决"><a href="#常见问题解决" class="header-anchor">#</a> 常见问题解决</h2> <h3 id="_1-变换原点问题"><a href="#_1-变换原点问题" class="header-anchor">#</a> 1. 变换原点问题</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 设置变换原点 */</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> center center<span class="token punctuation">;</span>
+    <span class="token comment">/* 或使用具体值 */</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> 50% 50%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3d-变换失效"><a href="#_2-3d-变换失效" class="header-anchor">#</a> 2. 3D 变换失效</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 确保父元素设置 3D 空间 */</span>
+    <span class="token property">perspective</span><span class="token punctuation">:</span> 1000px<span class="token punctuation">;</span>
+    <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-变换闪烁"><a href="#_3-变换闪烁" class="header-anchor">#</a> 3. 变换闪烁</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 使用 transform3d 强制 GPU 加速 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 避免使用 left, top 等属性 */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <ol><li>优先使用 transform 代替位置属性</li> <li>合理使用 3D 变换</li> <li>注意变换的性能影响</li> <li>使用适当的变换原点</li> <li>考虑移动设备性能</li> <li>提供降级方案</li> <li>注意变换的可访问性</li> <li>测试不同浏览器表现</li> <li>避免过度使用变换</li> <li>保持变换简单明了</li></ol> <h2 id="相关资源"><a href="#相关资源" class="header-anchor">#</a> 相关资源</h2> <ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank" rel="noopener noreferrer">MDN CSS Transforms<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms" target="_blank" rel="noopener noreferrer">CSS 3D Transforms<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://web.dev/animations-guide/" target="_blank" rel="noopener noreferrer">CSS Transform Performance<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://css-tricks.com/almanac/properties/t/transform/" target="_blank" rel="noopener noreferrer">CSS Transform Tools<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="/animation/technologies/css3.html">CSS 动画基础</a></li> <li><a href="/animation/technologies/css3-examples.html">CSS 动画示例</a></li> <li><a href="/animation/technologies/performance.html">性能优化指南</a></li> <li><a href="/animation/technologies/principles.html">动画设计原则</a></li> <li><a href="/animation/technologies/advanced-examples.html">高级动画示例</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/animation/technologies/keyframes.html" class="prev">
+        关键帧动画
+      </a></span> <span class="next"><a href="/animation/technologies/filters.html">
+        CSS滤镜
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/animation/assets/js/app.408fb514.js" defer></script><script src="/animation/assets/js/2.5b3bc356.js" defer></script><script src="/animation/assets/js/1.ab08a951.js" defer></script><script src="/animation/assets/js/55.b99e5cf0.js" defer></script>
+  </body>
+</html>

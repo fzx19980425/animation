@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>动画最佳实践 | Web Animation 动画库</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/animation/images/hero.png">
+    <meta name="description" content="Web动画开发完整指南">
+    
+    <link rel="preload" href="/animation/assets/css/0.styles.b228da77.css" as="style"><link rel="preload" href="/animation/assets/js/app.408fb514.js" as="script"><link rel="preload" href="/animation/assets/js/2.5b3bc356.js" as="script"><link rel="preload" href="/animation/assets/js/1.ab08a951.js" as="script"><link rel="preload" href="/animation/assets/js/37.091179bc.js" as="script"><link rel="prefetch" href="/animation/assets/js/10.ff739cea.js"><link rel="prefetch" href="/animation/assets/js/11.bf5ede1a.js"><link rel="prefetch" href="/animation/assets/js/12.f9e3cedb.js"><link rel="prefetch" href="/animation/assets/js/13.4c57fc3e.js"><link rel="prefetch" href="/animation/assets/js/14.db8ca42b.js"><link rel="prefetch" href="/animation/assets/js/15.d48b5620.js"><link rel="prefetch" href="/animation/assets/js/16.6798f64e.js"><link rel="prefetch" href="/animation/assets/js/17.a40a7d92.js"><link rel="prefetch" href="/animation/assets/js/18.9ecfa5ea.js"><link rel="prefetch" href="/animation/assets/js/19.6e3205fe.js"><link rel="prefetch" href="/animation/assets/js/20.628b3202.js"><link rel="prefetch" href="/animation/assets/js/21.fb8b6f22.js"><link rel="prefetch" href="/animation/assets/js/22.3e03c367.js"><link rel="prefetch" href="/animation/assets/js/23.49b7da03.js"><link rel="prefetch" href="/animation/assets/js/24.0a5df301.js"><link rel="prefetch" href="/animation/assets/js/25.cf410720.js"><link rel="prefetch" href="/animation/assets/js/26.d38fd659.js"><link rel="prefetch" href="/animation/assets/js/27.16afd375.js"><link rel="prefetch" href="/animation/assets/js/28.09392238.js"><link rel="prefetch" href="/animation/assets/js/29.12d0180f.js"><link rel="prefetch" href="/animation/assets/js/3.e45fdac8.js"><link rel="prefetch" href="/animation/assets/js/30.b273ba0b.js"><link rel="prefetch" href="/animation/assets/js/31.39f2908c.js"><link rel="prefetch" href="/animation/assets/js/32.3c5358d7.js"><link rel="prefetch" href="/animation/assets/js/33.75b092dc.js"><link rel="prefetch" href="/animation/assets/js/34.2db85df9.js"><link rel="prefetch" href="/animation/assets/js/35.10374096.js"><link rel="prefetch" href="/animation/assets/js/36.e690ff05.js"><link rel="prefetch" href="/animation/assets/js/38.1a871a63.js"><link rel="prefetch" href="/animation/assets/js/39.caa686e1.js"><link rel="prefetch" href="/animation/assets/js/4.e8777cae.js"><link rel="prefetch" href="/animation/assets/js/40.afe9dd9e.js"><link rel="prefetch" href="/animation/assets/js/41.a57025f2.js"><link rel="prefetch" href="/animation/assets/js/42.54deb15d.js"><link rel="prefetch" href="/animation/assets/js/43.f4cbe212.js"><link rel="prefetch" href="/animation/assets/js/44.5c474cc8.js"><link rel="prefetch" href="/animation/assets/js/45.6fc08af6.js"><link rel="prefetch" href="/animation/assets/js/46.12e49337.js"><link rel="prefetch" href="/animation/assets/js/47.6634cfec.js"><link rel="prefetch" href="/animation/assets/js/48.7293ec03.js"><link rel="prefetch" href="/animation/assets/js/49.ac137169.js"><link rel="prefetch" href="/animation/assets/js/5.7fde36a6.js"><link rel="prefetch" href="/animation/assets/js/50.b29cc359.js"><link rel="prefetch" href="/animation/assets/js/51.0c05a42d.js"><link rel="prefetch" href="/animation/assets/js/52.6aa9be30.js"><link rel="prefetch" href="/animation/assets/js/53.8d2ff91c.js"><link rel="prefetch" href="/animation/assets/js/54.e6e45f30.js"><link rel="prefetch" href="/animation/assets/js/55.b99e5cf0.js"><link rel="prefetch" href="/animation/assets/js/56.3a783432.js"><link rel="prefetch" href="/animation/assets/js/57.fd51f5f9.js"><link rel="prefetch" href="/animation/assets/js/6.5debf9dc.js"><link rel="prefetch" href="/animation/assets/js/7.daa2ee9e.js"><link rel="prefetch" href="/animation/assets/js/vendors~docsearch.92fa0d62.js">
+    <link rel="stylesheet" href="/animation/assets/css/0.styles.b228da77.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/animation/" class="home-link router-link-active"><!----> <span class="site-name">Web Animation 动画库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🎯 动画基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🎨 CSS动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🖼️ Canvas动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🔷 SVG动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🌐 3D动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📚 动画库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🚀 高级动画</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>📖 开发指南</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/animation/guides/best-practices.html" aria-current="page" class="active sidebar-link">最佳实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#设计原则" class="sidebar-link">设计原则</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#开发规范" class="sidebar-link">开发规范</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#实现技巧" class="sidebar-link">实现技巧</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#可访问性考虑" class="sidebar-link">可访问性考虑</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#测试与调试" class="sidebar-link">测试与调试</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#检查清单" class="sidebar-link">检查清单</a></li><li class="sidebar-sub-header"><a href="/animation/guides/best-practices.html#相关资源" class="sidebar-link">相关资源</a></li></ul></li><li><a href="/animation/guides/performance.html" class="sidebar-link">性能优化</a></li><li><a href="/animation/guides/tools.html" class="sidebar-link">开发工具</a></li><li><a href="/animation/guides/resources.html" class="sidebar-link">学习资源</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="动画最佳实践"><a href="#动画最佳实践" class="header-anchor">#</a> 动画最佳实践</h1> <h2 id="设计原则"><a href="#设计原则" class="header-anchor">#</a> 设计原则</h2> <h3 id="_1-保持简洁"><a href="#_1-保持简洁" class="header-anchor">#</a> 1. 保持简洁</h3> <p>动画应该服务于用户体验，而不是分散注意力：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 好的做法：简单明确的动画 */</span>
+<span class="token selector">.button</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> transform 0.2s ease<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.button:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.05<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 避免：过度复杂的动画 */</span>
+<span class="token selector">.button</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> complexAnimation 2s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> complexAnimation</span> <span class="token punctuation">{</span>
+    <span class="token selector">0%</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">25%</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.1<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>5deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">50%</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">75%</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>0.9<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-5deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">100%</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-考虑用户体验"><a href="#_2-考虑用户体验" class="header-anchor">#</a> 2. 考虑用户体验</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 提供动画控制选项 */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-reduced-motion</span><span class="token punctuation">:</span> reduce<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">*</span> <span class="token punctuation">{</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+        <span class="token property">transition</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 使用适当的动画时长 */</span>
+<span class="token selector">.quick-feedback</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 0.2s ease<span class="token punctuation">;</span>  <span class="token comment">/* 快速反馈 */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.page-transition</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 0.5s ease<span class="token punctuation">;</span>  <span class="token comment">/* 页面过渡 */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-动画时序"><a href="#_3-动画时序" class="header-anchor">#</a> 3. 动画时序</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 使用合适的缓动函数 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 自然的感觉 */</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.4<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 弹性效果 */</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 0.5s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.68<span class="token punctuation">,</span> -0.55<span class="token punctuation">,</span> 0.265<span class="token punctuation">,</span> 1.55<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 快速进入，慢速退出 */</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0.4<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="开发规范"><a href="#开发规范" class="header-anchor">#</a> 开发规范</h2> <h3 id="_1-命名规范"><a href="#_1-命名规范" class="header-anchor">#</a> 1. 命名规范</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 使用语义化的命名 */</span>
+<span class="token selector">.animate-fade-in</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token selector">.animate-slide-up</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token selector">.animate-bounce</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/* 避免使用无意义的命名 */</span>
+<span class="token selector">.animation1</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token selector">.animation2</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token selector">.animation3</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-代码组织"><a href="#_2-代码组织" class="header-anchor">#</a> 2. 代码组织</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 使用 SCSS 组织动画代码</span>
+<span class="token comment">// _animations.scss</span>
+
+<span class="token comment">// 基础动画</span>
+<span class="token keyword">@mixin</span> <span class="token selector">fade-in </span><span class="token punctuation">{</span>
+    <span class="token atrule"><span class="token rule">@keyframes</span> fadeIn</span> <span class="token punctuation">{</span>
+        <span class="token keyword">from</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token selector">to </span><span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> fadeIn 0.3s ease<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用动画</span>
+<span class="token selector">.element </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> fade-in<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-动画类管理"><a href="#_3-动画类管理" class="header-anchor">#</a> 3. 动画类管理</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 动画类管理工具</span>
+<span class="token keyword">class</span> <span class="token class-name">AnimationManager</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> className</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        element<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            element<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'animationend'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                element<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">once</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用示例</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">showElement</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> AnimationManager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> <span class="token string">'animate-fade-in'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 动画结束后的操作</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="实现技巧"><a href="#实现技巧" class="header-anchor">#</a> 实现技巧</h2> <h3 id="_1-链式动画"><a href="#_1-链式动画" class="header-anchor">#</a> 1. 链式动画</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 使用 Promise 管理动画序列</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">animateSequence</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> AnimationManager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> <span class="token string">'animate-fade-in'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> AnimationManager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> <span class="token string">'animate-slide-up'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> AnimationManager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> <span class="token string">'animate-bounce'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-动画状态管理"><a href="#_2-动画状态管理" class="header-anchor">#</a> 2. 动画状态管理</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 使用状态管理控制动画</span>
+<span class="token keyword">class</span> <span class="token class-name">AnimationState</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>isAnimating <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>currentAnimation <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">start</span><span class="token punctuation">(</span><span class="token parameter">animation</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isAnimating<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>isAnimating <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>currentAnimation <span class="token operator">=</span> animation<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>isAnimating <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>currentAnimation <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-响应式动画"><a href="#_3-响应式动画" class="header-anchor">#</a> 3. 响应式动画</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 根据设备性能调整动画</span>
+<span class="token keyword">class</span> <span class="token class-name">ResponsiveAnimation</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> fps <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">measureFPS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fps <span class="token operator">&lt;</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">enableLowPerformanceMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">measureFPS</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 测量设备性能</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> frames <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> lastTime <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">function</span> <span class="token function">countFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                frames<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token keyword">const</span> currentTime <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>currentTime <span class="token operator">-</span> lastTime <span class="token operator">&gt;=</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>frames<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>countFrame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>countFrame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token function">enableLowPerformanceMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'low-performance'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="可访问性考虑"><a href="#可访问性考虑" class="header-anchor">#</a> 可访问性考虑</h2> <h3 id="_1-减少动画"><a href="#_1-减少动画" class="header-anchor">#</a> 1. 减少动画</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 为偏好减少动画的用户提供选项 */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-reduced-motion</span><span class="token punctuation">:</span> reduce<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.animated-element</span> <span class="token punctuation">{</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+        <span class="token property">transition</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-动画控制"><a href="#_2-动画控制" class="header-anchor">#</a> 2. 动画控制</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 提供动画控制选项 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>animation-controls<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value javascript language-javascript"><span class="token function">toggleAnimations</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>暂停动画<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value javascript language-javascript"><span class="token function">reduceMotion</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>减少动画<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">function</span> <span class="token function">toggleAnimations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token string">'animations-paused'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">reduceMotion</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'reduced-motion'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_3-焦点管理"><a href="#_3-焦点管理" class="header-anchor">#</a> 3. 焦点管理</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 确保动画不影响焦点状态 */</span>
+<span class="token selector">.animated-element:focus</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> 2px solid #007bff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="测试与调试"><a href="#测试与调试" class="header-anchor">#</a> 测试与调试</h2> <h3 id="_1-动画测试"><a href="#_1-动画测试" class="header-anchor">#</a> 1. 动画测试</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 动画测试工具</span>
+<span class="token keyword">class</span> <span class="token class-name">AnimationTester</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">testAnimation</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> className</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> start <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> AnimationManager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> duration <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start<span class="token punctuation">;</span>
+        
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">动画执行时间: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>duration<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">ms</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> duration <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment">// 性能检查</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-调试工具"><a href="#_2-调试工具" class="header-anchor">#</a> 2. 调试工具</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 动画调试工具</span>
+<span class="token keyword">class</span> <span class="token class-name">AnimationDebugger</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> computedStyle <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token literal-property property">transform</span><span class="token operator">:</span> computedStyle<span class="token punctuation">.</span>transform<span class="token punctuation">,</span>
+            <span class="token literal-property property">transition</span><span class="token operator">:</span> computedStyle<span class="token punctuation">.</span>transition<span class="token punctuation">,</span>
+            <span class="token literal-property property">animation</span><span class="token operator">:</span> computedStyle<span class="token punctuation">.</span>animation
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="检查清单"><a href="#检查清单" class="header-anchor">#</a> 检查清单</h2> <ul><li>[ ] 动画是否简洁明了</li> <li>[ ] 是否考虑了性能影响</li> <li>[ ] 是否提供了动画控制选项</li> <li>[ ] 是否支持可访问性</li> <li>[ ] 是否使用了合适的动画时长</li> <li>[ ] 是否考虑了不同设备的性能</li> <li>[ ] 是否遵循了命名规范</li> <li>[ ] 是否实现了适当的错误处理</li> <li>[ ] 是否提供了降级方案</li> <li>[ ] 是否进行了充分的测试</li></ul> <h2 id="相关资源"><a href="#相关资源" class="header-anchor">#</a> 相关资源</h2> <ul><li><a href="https://www.w3.org/TR/web-animations-1/" target="_blank" rel="noopener noreferrer">Web Animation Guidelines<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://material.io/design/motion" target="_blank" rel="noopener noreferrer">Material Design Motion<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.a11yproject.com/posts/2013-12-11-never-remove-css-outlines/" target="_blank" rel="noopener noreferrer">A11Y Project Animation<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://web.dev/animations-guide/" target="_blank" rel="noopener noreferrer">Animation Performance<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/animation/examples/advanced-examples.html" class="prev">
+        高级动画示例
+      </a></span> <span class="next"><a href="/animation/guides/performance.html">
+        性能优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/animation/assets/js/app.408fb514.js" defer></script><script src="/animation/assets/js/2.5b3bc356.js" defer></script><script src="/animation/assets/js/1.ab08a951.js" defer></script><script src="/animation/assets/js/37.091179bc.js" defer></script>
+  </body>
+</html>

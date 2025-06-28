@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS 滤镜效果 | Web Animation 动画库</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/animation/images/hero.png">
+    <meta name="description" content="Web动画开发完整指南">
+    
+    <link rel="preload" href="/animation/assets/css/0.styles.b228da77.css" as="style"><link rel="preload" href="/animation/assets/js/app.408fb514.js" as="script"><link rel="preload" href="/animation/assets/js/2.5b3bc356.js" as="script"><link rel="preload" href="/animation/assets/js/1.ab08a951.js" as="script"><link rel="preload" href="/animation/assets/js/48.7293ec03.js" as="script"><link rel="prefetch" href="/animation/assets/js/10.ff739cea.js"><link rel="prefetch" href="/animation/assets/js/11.bf5ede1a.js"><link rel="prefetch" href="/animation/assets/js/12.f9e3cedb.js"><link rel="prefetch" href="/animation/assets/js/13.4c57fc3e.js"><link rel="prefetch" href="/animation/assets/js/14.db8ca42b.js"><link rel="prefetch" href="/animation/assets/js/15.d48b5620.js"><link rel="prefetch" href="/animation/assets/js/16.6798f64e.js"><link rel="prefetch" href="/animation/assets/js/17.a40a7d92.js"><link rel="prefetch" href="/animation/assets/js/18.9ecfa5ea.js"><link rel="prefetch" href="/animation/assets/js/19.6e3205fe.js"><link rel="prefetch" href="/animation/assets/js/20.628b3202.js"><link rel="prefetch" href="/animation/assets/js/21.fb8b6f22.js"><link rel="prefetch" href="/animation/assets/js/22.3e03c367.js"><link rel="prefetch" href="/animation/assets/js/23.49b7da03.js"><link rel="prefetch" href="/animation/assets/js/24.0a5df301.js"><link rel="prefetch" href="/animation/assets/js/25.cf410720.js"><link rel="prefetch" href="/animation/assets/js/26.d38fd659.js"><link rel="prefetch" href="/animation/assets/js/27.16afd375.js"><link rel="prefetch" href="/animation/assets/js/28.09392238.js"><link rel="prefetch" href="/animation/assets/js/29.12d0180f.js"><link rel="prefetch" href="/animation/assets/js/3.e45fdac8.js"><link rel="prefetch" href="/animation/assets/js/30.b273ba0b.js"><link rel="prefetch" href="/animation/assets/js/31.39f2908c.js"><link rel="prefetch" href="/animation/assets/js/32.3c5358d7.js"><link rel="prefetch" href="/animation/assets/js/33.75b092dc.js"><link rel="prefetch" href="/animation/assets/js/34.2db85df9.js"><link rel="prefetch" href="/animation/assets/js/35.10374096.js"><link rel="prefetch" href="/animation/assets/js/36.e690ff05.js"><link rel="prefetch" href="/animation/assets/js/37.091179bc.js"><link rel="prefetch" href="/animation/assets/js/38.1a871a63.js"><link rel="prefetch" href="/animation/assets/js/39.caa686e1.js"><link rel="prefetch" href="/animation/assets/js/4.e8777cae.js"><link rel="prefetch" href="/animation/assets/js/40.afe9dd9e.js"><link rel="prefetch" href="/animation/assets/js/41.a57025f2.js"><link rel="prefetch" href="/animation/assets/js/42.54deb15d.js"><link rel="prefetch" href="/animation/assets/js/43.f4cbe212.js"><link rel="prefetch" href="/animation/assets/js/44.5c474cc8.js"><link rel="prefetch" href="/animation/assets/js/45.6fc08af6.js"><link rel="prefetch" href="/animation/assets/js/46.12e49337.js"><link rel="prefetch" href="/animation/assets/js/47.6634cfec.js"><link rel="prefetch" href="/animation/assets/js/49.ac137169.js"><link rel="prefetch" href="/animation/assets/js/5.7fde36a6.js"><link rel="prefetch" href="/animation/assets/js/50.b29cc359.js"><link rel="prefetch" href="/animation/assets/js/51.0c05a42d.js"><link rel="prefetch" href="/animation/assets/js/52.6aa9be30.js"><link rel="prefetch" href="/animation/assets/js/53.8d2ff91c.js"><link rel="prefetch" href="/animation/assets/js/54.e6e45f30.js"><link rel="prefetch" href="/animation/assets/js/55.b99e5cf0.js"><link rel="prefetch" href="/animation/assets/js/56.3a783432.js"><link rel="prefetch" href="/animation/assets/js/57.fd51f5f9.js"><link rel="prefetch" href="/animation/assets/js/6.5debf9dc.js"><link rel="prefetch" href="/animation/assets/js/7.daa2ee9e.js"><link rel="prefetch" href="/animation/assets/js/vendors~docsearch.92fa0d62.js">
+    <link rel="stylesheet" href="/animation/assets/css/0.styles.b228da77.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/animation/" class="home-link router-link-active"><!----> <span class="site-name">Web Animation 动画库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" class="nav-link">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/animation/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画基础" class="dropdown-title"><span class="title">动画基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画基础" class="mobile-dropdown-title"><span class="title">动画基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/basics/principles.html" class="nav-link">
+  动画原理
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/javascript.html" class="nav-link">
+  JavaScript动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/basics/request-animation-frame.html" class="nav-link">
+  RequestAnimationFrame
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画技术" class="dropdown-title"><span class="title">动画技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画技术" class="mobile-dropdown-title"><span class="title">动画技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/technologies/css3.html" class="nav-link">
+  CSS动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/canvas.html" class="nav-link">
+  Canvas动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/svg.html" class="nav-link">
+  SVG动画
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/webgl.html" class="nav-link">
+  WebGL/3D
+</a></li><li class="dropdown-item"><!----> <a href="/animation/technologies/animation-libraries.html" class="nav-link">
+  动画库
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="动画示例" class="dropdown-title"><span class="title">动画示例</span> <span class="arrow down"></span></button> <button type="button" aria-label="动画示例" class="mobile-dropdown-title"><span class="title">动画示例</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/examples/css3-examples.html" class="nav-link">
+  CSS动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/canvas-examples.html" class="nav-link">
+  Canvas动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/svg-examples.html" class="nav-link">
+  SVG动画示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/threejs-examples.html" class="nav-link">
+  Three.js示例
+</a></li><li class="dropdown-item"><!----> <a href="/animation/examples/advanced-examples.html" class="nav-link">
+  高级动画示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发指南" class="dropdown-title"><span class="title">开发指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发指南" class="mobile-dropdown-title"><span class="title">开发指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/animation/guides/best-practices.html" class="nav-link">
+  最佳实践
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/performance.html" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/tools.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/animation/guides/resources.html" class="nav-link">
+  学习资源
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fzx19980425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/fzx0425" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1900382830734376" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🎯 动画基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>🎨 CSS动画技术</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/animation/technologies/css3.html" class="sidebar-link">CSS3动画基础</a></li><li><a href="/animation/technologies/transitions.html" class="sidebar-link">CSS过渡</a></li><li><a href="/animation/technologies/keyframes.html" class="sidebar-link">关键帧动画</a></li><li><a href="/animation/technologies/transform.html" class="sidebar-link">CSS变换</a></li><li><a href="/animation/technologies/filters.html" aria-current="page" class="active sidebar-link">CSS滤镜</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#目录" class="sidebar-link">目录</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#基础概念" class="sidebar-link">基础概念</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#滤镜类型" class="sidebar-link">滤镜类型</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#滤镜组合" class="sidebar-link">滤镜组合</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#动画效果" class="sidebar-link">动画效果</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#性能优化" class="sidebar-link">性能优化</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#常见问题解决" class="sidebar-link">常见问题解决</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#最佳实践" class="sidebar-link">最佳实践</a></li><li class="sidebar-sub-header"><a href="/animation/technologies/filters.html#相关资源" class="sidebar-link">相关资源</a></li></ul></li><li><a href="/animation/examples/css3-examples.html" class="sidebar-link">CSS3动画示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🖼️ Canvas动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🔷 SVG动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🌐 3D动画技术</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📚 动画库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🚀 高级动画</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📖 开发指南</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css-滤镜效果"><a href="#css-滤镜效果" class="header-anchor">#</a> CSS 滤镜效果</h1> <blockquote><p>CSS 滤镜（Filter）是一种强大的视觉效果工具，允许我们对元素应用各种图形效果，如模糊、亮度调整、对比度等。本文档将详细介绍 CSS 滤镜的使用方法和最佳实践。更多示例请参考 <a href="/animation/technologies/css3-examples.html">CSS 动画示例</a>。</p></blockquote> <h2 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h2> <ul><li><a href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">基础概念</a></li> <li><a href="#%E6%BB%A4%E9%95%9C%E7%B1%BB%E5%9E%8B">滤镜类型</a></li> <li><a href="#%E6%BB%A4%E9%95%9C%E7%BB%84%E5%90%88">滤镜组合</a></li> <li><a href="#%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C">动画效果</a></li> <li><a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">性能优化</a></li> <li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">常见问题</a></li> <li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li> <li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90">相关资源</a></li></ul> <h2 id="基础概念"><a href="#基础概念" class="header-anchor">#</a> 基础概念</h2> <p>CSS 滤镜允许我们通过简单的属性来创建复杂的视觉效果。这些效果可以单独使用，也可以组合使用。更多基础概念请参考 <a href="/animation/technologies/css3.html">CSS 动画基础</a>。</p> <h3 id="基本语法"><a href="#基本语法" class="header-anchor">#</a> 基本语法</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 单个滤镜 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 多个滤镜 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 使用 url() 引用 SVG 滤镜 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'filters.svg#filter-id'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="滤镜类型"><a href="#滤镜类型" class="header-anchor">#</a> 滤镜类型</h2> <h3 id="_1-模糊-blur"><a href="#_1-模糊-blur" class="header-anchor">#</a> 1. 模糊 (blur)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 高斯模糊 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 轻微模糊 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 强烈模糊 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-亮度-brightness"><a href="#_2-亮度-brightness" class="header-anchor">#</a> 2. 亮度 (brightness)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 增加亮度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 降低亮度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 保持原始亮度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-对比度-contrast"><a href="#_3-对比度-contrast" class="header-anchor">#</a> 3. 对比度 (contrast)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 增加对比度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">contrast</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 降低对比度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">contrast</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 保持原始对比度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-灰度-grayscale"><a href="#_4-灰度-grayscale" class="header-anchor">#</a> 4. 灰度 (grayscale)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 完全灰度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">grayscale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 部分灰度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">grayscale</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 无灰度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">grayscale</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_5-色相旋转-hue-rotate"><a href="#_5-色相旋转-hue-rotate" class="header-anchor">#</a> 5. 色相旋转 (hue-rotate)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 旋转 90 度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">hue-rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 旋转 180 度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">hue-rotate</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 旋转 360 度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">hue-rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_6-反相-invert"><a href="#_6-反相-invert" class="header-anchor">#</a> 6. 反相 (invert)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 完全反相 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">invert</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 部分反相 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">invert</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 无反相 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">invert</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_7-不透明度-opacity"><a href="#_7-不透明度-opacity" class="header-anchor">#</a> 7. 不透明度 (opacity)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 半透明 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">opacity</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 完全透明 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">opacity</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 完全不透明 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">opacity</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-饱和度-saturate"><a href="#_8-饱和度-saturate" class="header-anchor">#</a> 8. 饱和度 (saturate)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 增加饱和度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">saturate</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 降低饱和度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">saturate</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 保持原始饱和度 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">saturate</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_9-褐色-sepia"><a href="#_9-褐色-sepia" class="header-anchor">#</a> 9. 褐色 (sepia)</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 完全褐色 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">sepia</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 部分褐色 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">sepia</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 无褐色 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">sepia</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="滤镜组合"><a href="#滤镜组合" class="header-anchor">#</a> 滤镜组合</h2> <h3 id="_1-基础组合"><a href="#_1-基础组合" class="header-anchor">#</a> 1. 基础组合</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> 
+        <span class="token function">blur</span><span class="token punctuation">(</span>2px<span class="token punctuation">)</span>
+        <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span>
+        <span class="token function">contrast</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span>
+        <span class="token function">grayscale</span><span class="token punctuation">(</span>0.3<span class="token punctuation">)</span>
+        <span class="token function">hue-rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span>
+        <span class="token function">saturate</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-创意效果"><a href="#_2-创意效果" class="header-anchor">#</a> 2. 创意效果</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 复古效果 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> 
+        <span class="token function">sepia</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span>
+        <span class="token function">contrast</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span>
+        <span class="token function">brightness</span><span class="token punctuation">(</span>0.9<span class="token punctuation">)</span>
+        <span class="token function">saturate</span><span class="token punctuation">(</span>0.8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 梦幻效果 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> 
+        <span class="token function">blur</span><span class="token punctuation">(</span>1px<span class="token punctuation">)</span>
+        <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span>
+        <span class="token function">contrast</span><span class="token punctuation">(</span>1.1<span class="token punctuation">)</span>
+        <span class="token function">saturate</span><span class="token punctuation">(</span>1.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 冷色调 */</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> 
+        <span class="token function">hue-rotate</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span>
+        <span class="token function">saturate</span><span class="token punctuation">(</span>0.8<span class="token punctuation">)</span>
+        <span class="token function">brightness</span><span class="token punctuation">(</span>1.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-滤镜管理器"><a href="#_3-滤镜管理器" class="header-anchor">#</a> 3. 滤镜管理器</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">FilterManager</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>element <span class="token operator">=</span> element<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>filters <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateFilters</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">removeFilter</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateFilters</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">updateFilters</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> filterString <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>type<span class="token punctuation">,</span> value<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>filter <span class="token operator">=</span> filterString<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="动画效果"><a href="#动画效果" class="header-anchor">#</a> 动画效果</h2> <h3 id="_1-过渡动画"><a href="#_1-过渡动画" class="header-anchor">#</a> 1. 过渡动画</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> filter 0.3s ease<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-关键帧动画"><a href="#_2-关键帧动画" class="header-anchor">#</a> 2. 关键帧动画</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@keyframes</span> filterAnimation</span> <span class="token punctuation">{</span>
+    <span class="token selector">0%</span> <span class="token punctuation">{</span> <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">50%</span> <span class="token punctuation">{</span> <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">100%</span> <span class="token punctuation">{</span> <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> filterAnimation 2s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-交互效果"><a href="#_3-交互效果" class="header-anchor">#</a> 3. 交互效果</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> filter 0.3s ease<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>2px<span class="token punctuation">)</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element:active</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>0.8<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="性能优化"><a href="#性能优化" class="header-anchor">#</a> 性能优化</h2> <p>更多性能优化建议请参考<a href="/animation/technologies/performance.html">性能优化指南</a>。</p> <h3 id="_1-避免过度使用滤镜"><a href="#_1-避免过度使用滤镜" class="header-anchor">#</a> 1. 避免过度使用滤镜</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 不推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> 
+        <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span>
+        <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span>
+        <span class="token function">contrast</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span>
+        <span class="token function">grayscale</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span>
+        <span class="token function">hue-rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span>
+        <span class="token function">invert</span><span class="token punctuation">(</span>0.2<span class="token punctuation">)</span>
+        <span class="token function">opacity</span><span class="token punctuation">(</span>0.8<span class="token punctuation">)</span>
+        <span class="token function">saturate</span><span class="token punctuation">(</span>1.5<span class="token punctuation">)</span>
+        <span class="token function">sepia</span><span class="token punctuation">(</span>0.3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span> <span class="token function">contrast</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-使用-will-change"><a href="#_2-使用-will-change" class="header-anchor">#</a> 2. 使用 will-change</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">will-change</span><span class="token punctuation">:</span> filter<span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-考虑降级方案"><a href="#_3-考虑降级方案" class="header-anchor">#</a> 3. 考虑降级方案</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@supports</span> <span class="token keyword">not</span> <span class="token punctuation">(</span><span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.element</span> <span class="token punctuation">{</span>
+        <span class="token comment">/* 降级效果 */</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 0.8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="常见问题解决"><a href="#常见问题解决" class="header-anchor">#</a> 常见问题解决</h2> <h3 id="_1-滤镜性能问题"><a href="#_1-滤镜性能问题" class="header-anchor">#</a> 1. 滤镜性能问题</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 使用 transform 强制 GPU 加速 */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-滤镜叠加问题"><a href="#_2-滤镜叠加问题" class="header-anchor">#</a> 2. 滤镜叠加问题</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 不推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.element:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* 会覆盖之前的 blur */</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 推荐 */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.element:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span> <span class="token function">brightness</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-浏览器兼容性"><a href="#_3-浏览器兼容性" class="header-anchor">#</a> 3. 浏览器兼容性</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 添加前缀 */</span>
+    <span class="token property">-webkit-filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* 提供降级方案 */</span>
+    <span class="token atrule"><span class="token rule">@supports</span> <span class="token keyword">not</span> <span class="token punctuation">(</span><span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>5px<span class="token punctuation">)</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 0.8<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <ol><li>合理使用滤镜效果</li> <li>注意滤镜的性能影响</li> <li>提供降级方案</li> <li>考虑移动设备性能</li> <li>避免过度使用滤镜</li> <li>注意滤镜的可访问性</li> <li>测试不同浏览器表现</li> <li>使用适当的滤镜组合</li> <li>考虑滤镜的动画效果</li> <li>保持滤镜效果简单明了</li></ol> <h2 id="相关资源"><a href="#相关资源" class="header-anchor">#</a> 相关资源</h2> <ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank" rel="noopener noreferrer">MDN CSS Filters<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Filter_Effects" target="_blank" rel="noopener noreferrer">CSS Filter Effects<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://web.dev/animations-guide/" target="_blank" rel="noopener noreferrer">CSS Filter Performance<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://css-tricks.com/almanac/properties/f/filter/" target="_blank" rel="noopener noreferrer">CSS Filter Tools<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="/animation/technologies/css3.html">CSS 动画基础</a></li> <li><a href="/animation/technologies/css3-examples.html">CSS 动画示例</a></li> <li><a href="/animation/technologies/performance.html">性能优化指南</a></li> <li><a href="/animation/technologies/principles.html">动画设计原则</a></li> <li><a href="/animation/technologies/advanced-examples.html">高级动画示例</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/animation/technologies/transform.html" class="prev">
+        CSS变换
+      </a></span> <span class="next"><a href="/animation/examples/css3-examples.html">
+        CSS3动画示例
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/animation/assets/js/app.408fb514.js" defer></script><script src="/animation/assets/js/2.5b3bc356.js" defer></script><script src="/animation/assets/js/1.ab08a951.js" defer></script><script src="/animation/assets/js/48.7293ec03.js" defer></script>
+  </body>
+</html>
